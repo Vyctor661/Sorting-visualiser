@@ -11,4 +11,21 @@ html {
     width: 500px;
     height: 300px;
     border: 1px solid black;
+    position: relative;
+}
+
+.element {
+    width: 3px;
+    border: 1px solid black;
+    margin-left: 1px;
+    background: black;
+    position: absolute;
+    bottom: 0;
+}
+
+.elementContainer {
+    height: 100%;
+    width: 3px;
+    margin-left: 5px;
+    display: inline-flex;
 }

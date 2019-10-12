@@ -1,4 +1,4 @@
-import { simpleSort } from './simplesort.js';
+import { simpleSort } from './algorithms/simplesort.js';
 
 let startButton = document.getElementById("startButton");
 
