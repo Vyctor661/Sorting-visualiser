@@ -1,14 +1,20 @@
 let inner = document.getElementById("visualiser");
+const startOfElement = `<div class="elementContainer"><div class="element" style="height: `;
+const endOfElement = `%;"></div></div>`;
 inner.innerHTML = '';
+let innerBuild = '';
+let i = 1;
 
 export function update(v, isNew = false) {
 
+    i = 1;
+    innerBuild = '';
     if (isNew) {
-        inner.value = '';
+        inner.innerHTML = "";
     }
-    for (let i = 1; i <= 20; i++) {
-        inner.value += v[i] + " ";
+
+    for (i = 1; i <= 60; i++) {
+        innerBuild += startOfElement + String(v[i]) + endOfElement;
     }
-    inner.value += "\n";
-    inner.scrollBy(0, 100);
+    inner.innerHTML = innerBuild;
 }
