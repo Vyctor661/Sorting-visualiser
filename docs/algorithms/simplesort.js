@@ -1,5 +1,9 @@
 import { filler } from '../vectorFiller.js';
 import { update } from '../visualiser.js';
+import { timeCounter } from '../timer.js';
+
+let timer = document.getElementById("timer");
+timer.innerHTML = "0s"
 
 let v = Array(60);
 const sleep = (milliseconds) => {
@@ -8,6 +12,7 @@ const sleep = (milliseconds) => {
 
 
 export async function simpleSort() {
+    timeCounter(true);
     v = filler(v);
     update(v, true);
 
@@ -23,4 +28,5 @@ export async function simpleSort() {
             }
         }
     }
+    timer.innerHTML = timeCounter(false) + 's';
 }
